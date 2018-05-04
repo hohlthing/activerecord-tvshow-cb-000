@@ -17,5 +17,5 @@ connection_details = YAML::load(File.open('config/database.yml'))
 DB = ActiveRecord::Base.establish_connection(connection_details)
 
 if ENV["ACTIVE_RECORD_ENV"] == "test"
-  ActiveRecord::Migration.verbose = true
+  ActiveRecord::Migration.verbose = false
 end
